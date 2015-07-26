@@ -19,5 +19,15 @@ Analizando + Limpiando datos de contratacion publica.
 
 ## Analisis
 
+Algunas:
+
+
+- Quienes obtineen mas contratos?
+- Quienes obtuvieron contratos siempre que fueron oferentes?
+- Contrataciones con- oferentes unicos?
+- Anomalias en duracion de convocatorias
+- Companias fantasmas ( sin mucha informacion en internet) (i.e: fundaciones sin mucho PR con 2/3 contratos gigantes)
+
+
 R magic..
 
