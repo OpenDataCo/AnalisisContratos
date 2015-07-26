@@ -29,5 +29,21 @@ Algunas:
 - Companias fantasmas ( sin mucha informacion en internet) (i.e: fundaciones sin mucho PR con 2/3 contratos gigantes)
 
 
-R magic..
+## Estructura
+
+# Limpieza
+
+Contine los scripts para transformar el dataset inicial en un dataset normalizado
+
+
+# Analisis
+
+Contiene los scripts para analisis:
+
+
+`playground.R` contiene un script juguete que usa sparkR para procesar el dataset y plotear los montos totales y numero de contratos para los contratantes que son fundaciones.
+
+![](https://raw.githubusercontent.com/OpenDataCo/AnalisisContratos/master/graphs/example.png)
+
+more R magic..
 
