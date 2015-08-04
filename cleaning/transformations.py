@@ -1,7 +1,10 @@
 import re
 
-def clanLugar(string):
-	#Departamento y Municipio de Ejecuci\u00f3n
+def cleanLugar(string):
+	"""
+	i.e: " Valle del  Cauca : Cali"
+	    => {'departamento': "valle del cauca", "ciudad": "cali"}
+	"""
 	split_str = string.split(":")
 	if len(split_str)>1:
 		departamento = split_str[0]
@@ -13,17 +16,24 @@ def clanLugar(string):
 
 	departamento = cleanStr(departamento)
 	ciudad = cleanStr(ciudad)
-	return (departamento, ciudad)
-
-
+	lugar = {"departamento": departamento, "ciudad": ciudad}
+	return lugar
 
 def cleanStr(string):
 	return string.strip().lower()
 
 def cleanPrecio(precio):
+	"""
+	i.e: "$10,000,123 pesos" 
+	    => "10000123"
+	"""
 	return int(re.findall('\d+', precio.strip().replace("$","").replace(",", ""))[0])
 
 def cleanFecha(fecha):
+	"""
+	 i.e 13 de March de 2012
+	 => {'dia': 13, 'mes':3, 'anio':2012}
+	"""
 
 	months_map = {
 
@@ -54,8 +64,6 @@ def cleanFecha(fecha):
 	}
 
 	fecha = cleanStr(fecha)
-	print("FECHA:")
-	print(fecha)
 	try:
 		(dia, mes, anio) = re.findall('([\d]+) de ([\w\W]+) de (\d\d\d\d)', fecha)[0]
 		dia = int(cleanStr(dia))
@@ -63,25 +71,27 @@ def cleanFecha(fecha):
 		mes = int(months_map[mes])
 		anio = int(cleanStr(anio))
 
-		date = {"dia":dia, "mes":mes, "año": anio}
+		date = {"dia":dia, "mes":mes, "anio": anio}
 
 		return date
 	except Exception:
-		return {"dia":-1, "mes":-1, "año": -1}
+		return {"dia":-1, "mes":-1, "anio": -1}
 	
 
 def cleanIdentificacion(identificacion):
+	'''
+	 	i.e: "c.c 123456" 
+	 	=> { "numero": 123456, "tipo":"cc" }
+	'''
 	try:
 		numero = int(re.findall('\d+', identificacion.strip().replace(".","").replace(",", ""))[0])
 		tipo = identificacion.split(" ")[0].lower()
-		return numero, tipo
+		return {"numero": numero, "tipo": tipo}
 	except Exception:
-		return None
+		return {"numero": identificacion, "tipo": ""}
 
 def cleanProponentes(proponentes):
-	print(proponentes.split("\r\n"))
+	return proponentes.split("\r\n")
 
 
-#cleanFecha("assd")
 
-print(cleanPrecio(" $1000,10000 pesos"))
