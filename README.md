@@ -17,6 +17,11 @@ Analizando + Limpiando datos de contratacion publica.
 	- Formatear montos. i.e: `$12,000,000     Peso Colombiano`  => `12000000`
 	- Formatear el campo `Calificación definitiva de los proponentes - Orden de elegibilidad` para extraer los proponentes, y el puntaje.
 
+	### Script de limpieza
+
+	1. `cleaning/clean.py` es un script de limpieza
+	2. uso: `python3.4 cleaning/clean.py --input path/to/dataset.json --output path/to/shiny_clean_dataset.json`
+
 ## Analisis
 
 Algunas:
