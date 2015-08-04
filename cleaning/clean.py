@@ -19,18 +19,18 @@ class Parser:
 
 class FieldSelector:
 
+	"""
+	retorna las llaves dentro de jsonObject que cumplen la funcion "condicion"
+	"""
 	@staticmethod
-	"""
-	retorna las llaves dentro de jsonObject que cumplen la funcion `condicion`
-
-	"""
 	def fieldSelector(jsonObject, condition):
 		return filter( condition, jsonObject.keys())
 
-	@staticmethod
+	
 	"""
 	retorna las llaves dentro de jsonObject que contienen la palabra word
 	"""
+	@staticmethod
 	def fieldContains(jsonObject, word):
 		f = lambda key: word.lower() in key.lower()
 		return FieldSelector.fieldSelector(jsonObject, f)
