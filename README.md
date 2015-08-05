@@ -6,7 +6,6 @@ Analizando + Limpiando datos de contratacion publica.
 1. Datos generados con: https://github.com/dav009/contra
 2. [Descargar dataset](https://github.com/dav009/contra/blob/master/datos_json_contratos_gov_co.torrent?raw=true)
 
-
 ## Limpieza
 
 1. Limpiar Campos:
@@ -52,3 +51,5 @@ Contiene los scripts para analisis:
 
 more R magic..
 
+## Test
+  to run test form the root folder run this command `python -m unittest discover specs/test/cleaning/`
