@@ -4,7 +4,8 @@ Analizando + Limpiando datos de contratacion publica.
 
 
 1. Datos generados con: https://github.com/dav009/contra
-2. [Descargar dataset](https://github.com/dav009/contra/blob/master/datos_json_contratos_gov_co.torrent?raw=true)
+2. [Descargar dataset via torrent](https://github.com/dav009/contra/blob/master/datos_json_contratos_gov_co.torrent?raw=true)
+3. [Descargar dataset via datahub](http://datahub.io/dataset/dataset-datos-contratacion-estatal-colombia)
 
 ## Limpieza
 
