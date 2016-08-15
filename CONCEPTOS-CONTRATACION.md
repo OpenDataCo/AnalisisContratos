@@ -59,6 +59,7 @@ Presupuesto anual de la Entidad (SMLMV) Menor Cuantía (SMLMV) Mínima cuantía 
 * Entre 400.000 y 850.000 650 65
 * Entre 120.000 y 400.000 450 45
 * Menos de 120.000 280 28
+
 Literal (b) del artículo 2 de la Ley 1150 del 2007
 
 Referencia:
